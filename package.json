@@ -1,0 +1,29 @@
+{
+	"name": "luyx-management-api-types",
+	"version": "1.0.0",
+	"description": "API types for luyx-management",
+	"exports": {
+		"v1": "./build/v1"
+	},
+	"author": "Luyx",
+	"license": "MIT",
+	"type": "module",
+	"bugs": {
+		"url": "https://github.com/LuyxDevelopment/luyx-management-api-types/issues"
+	},
+	"homepage": "https://github.com/LuyxDevelopment/luyx-management-api-types#readme",
+	"devDependencies": {
+		"@types/node": "^18.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.30.5",
+		"@typescript-eslint/parser": "^5.30.5",
+		"eslint": "^8.19.0",
+		"typescript": "^4.7.4",
+		"mongoose": "^6.4.3"
+	},
+	"dependencies": {},
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint",
+		"start": "npm run lint && npm run build && node build/index.js"
+	}
+}
