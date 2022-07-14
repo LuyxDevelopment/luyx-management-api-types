@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "API types for luyx-management",
 	"exports": {
-		"v1": "./build/v1"
+		"v1": "./build/v1/index.js"
 	},
 	"author": "Luyx",
 	"license": "MIT",
