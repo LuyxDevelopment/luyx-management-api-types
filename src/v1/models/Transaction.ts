@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import { Base } from './base.js';
 
 export enum TransactionStage {
 	WITHDRAWAL_PENDING,
@@ -13,12 +13,12 @@ export enum TransactionType {
 	TRANSFER,
 }
 
-export interface Transaction {
+export interface Transaction extends Base {
 	amount: number;
 	transactionType: TransactionType;
 	timestamp: number;
 	description: string;
-	from: null | mongoose.Types.ObjectId;
-	to: null | mongoose.Types.ObjectId;
+	from: null | string;
+	to: null | string;
 	transactionStage: TransactionStage;
 }

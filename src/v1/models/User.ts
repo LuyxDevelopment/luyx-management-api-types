@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+import { Base } from './base.js';
 
-export interface User {
+export interface User extends Base {
 	firstName: string;
 	lastName: string;
 	contact: {
@@ -8,8 +8,8 @@ export interface User {
 		email: string;
 		phone: string | null;
 	};
-	assignedProjects: mongoose.Types.ObjectId[];
+	assignedProjects: string[];
 	hiredAt: number;
 	jobTitles: string[];
-	wallet: mongoose.Types.ObjectId;
+	wallet: string;
 }

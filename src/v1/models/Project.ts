@@ -1,10 +1,10 @@
-import mongoose from 'mongoose';
+import { Base } from './base.js';
 
-export interface Project {
+export interface Project extends Base {
 	name: string;
 	description: string;
 	startedAt: number;
 	deadline: number;
-	wallet: mongoose.Types.ObjectId;
-	assignedUsers: mongoose.Types.ObjectId[];
+	wallet: string;
+	assignedUsers: string[];
 }
