@@ -22,8 +22,8 @@
 	},
 	"dependencies": {},
 	"scripts": {
-		"build": "tsc --cache --fix",
-		"lint": "eslint",
+		"build": "tsc",
+		"lint": "eslint --cache --fix",
 		"start": "npm run lint && npm run build && node build/index.js",
 		"preinstall": "npm run build"
 	}
