@@ -22,9 +22,9 @@
 	},
 	"dependencies": {},
 	"scripts": {
-		"build": "tsc",
+		"build": "tsc --cache --fix",
 		"lint": "eslint",
 		"start": "npm run lint && npm run build && node build/index.js",
-		"prepare": "npm run lint && npm run build"
+		"preinstall": "npm run build"
 	}
 }
