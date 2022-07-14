@@ -7,7 +7,5 @@ export interface PostTokenRouteOptions {
 	Body: {
 		name: string;
 	};
-	Reply: {
-		data: Token | null;
-	};
+	Reply: Token | null;
 }

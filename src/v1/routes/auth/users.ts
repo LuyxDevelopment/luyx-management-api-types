@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import { User } from '../../models/User.js';
 import { BaseAuthRouteOptions } from './base.js';
 
@@ -13,22 +12,18 @@ export interface PostUsersRouteOptions extends BaseAuthRouteOptions {
 		};
 		jobTitles: string[];
 	};
-	Reply: {
-		data: User;
-	};
+	Reply: User;
 }
 
 export interface GetUsersRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
-	Reply: {
-		data: User | null;
-	}
+	Reply: User | null;
 }
 
 export interface DeleteUsersRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
 }

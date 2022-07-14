@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import { Transaction, TransactionType } from '../../models/Transaction.js';
 import { TransactionStatus } from '../../models/Wallet.js';
 import { BaseAuthRouteOptions } from './base.js';
@@ -8,12 +7,8 @@ export interface PostTransactionsRouteOptions extends BaseAuthRouteOptions {
 		amount: number;
 		transactionType: TransactionType;
 		description: string;
-		from: mongoose.Types.ObjectId | null;
-		to: mongoose.Types.ObjectId | null;
+		from: string | null;
+		to: string | null;
 	};
-	Reply: {
-		data: Transaction;
-	} | {
-		status: TransactionStatus;
-	};
+	Reply: Transaction | TransactionStatus;
 }

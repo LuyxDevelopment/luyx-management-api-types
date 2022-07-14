@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import { Project } from '../../models/Project.js';
 import { BaseAuthRouteOptions } from './base.js';
 
@@ -11,26 +10,22 @@ export interface PostProjectsRouteOptions extends BaseAuthRouteOptions {
 	Header: {
 		Authorization: string;
 	};
-	Reply: {
-		data: Project;
-	};
+	Reply: Project;
 }
 
 export interface GetProjectsRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
 	Header: {
 		Authorization: string;
 	};
-	Reply: {
-		data: Project | null;
-	}
+	Reply: Project | null;
 }
 
 export interface DeleteProjectsRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
 	Header: {
 		Authorization: string;
@@ -39,18 +34,18 @@ export interface DeleteProjectsRouteOptions extends BaseAuthRouteOptions {
 
 export interface PostProjectsAssignedRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
 	Body: {
-		userId: mongoose.Types.ObjectId;
+		userId: string;
 	};
 }
 
 export interface DeleteProjectsAssignedRouteOptions extends BaseAuthRouteOptions {
 	Params: {
-		id: mongoose.Types.ObjectId;
+		id: string;
 	};
 	Body: {
-		userId: mongoose.Types.ObjectId;
+		userId: string;
 	};
 }
