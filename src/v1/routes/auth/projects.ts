@@ -2,14 +2,7 @@ import { Project } from '../../models/Project.js';
 import { BaseAuthRouteOptions } from './base.js';
 
 export interface PostProjectsRouteOptions extends BaseAuthRouteOptions {
-	Body: {
-		name: string;
-		description: string;
-		deadline: number;
-	};
-	Header: {
-		Authorization: string;
-	};
+	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | 'assign' | 'unassign'>;
 	Reply: Project;
 }
 
@@ -17,18 +10,12 @@ export interface GetProjectsRouteOptions extends BaseAuthRouteOptions {
 	Params: {
 		id: string;
 	};
-	Header: {
-		Authorization: string;
-	};
 	Reply: Project | null;
 }
 
 export interface DeleteProjectsRouteOptions extends BaseAuthRouteOptions {
 	Params: {
 		id: string;
-	};
-	Header: {
-		Authorization: string;
 	};
 }
 

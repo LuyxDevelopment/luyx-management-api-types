@@ -2,16 +2,7 @@ import { User } from '../../models/User.js';
 import { BaseAuthRouteOptions } from './base.js';
 
 export interface PostUsersRouteOptions extends BaseAuthRouteOptions {
-	Body: {
-		firstName: string;
-		lastName: string;
-		contact: {
-			discordId?: string | null;
-			email: string;
-			phone?: string;
-		};
-		jobTitles: string[];
-	};
+	Body: Omit<User, 'assignedProjects' | 'hiredAt' | 'wallet' | 'getFullName'>;
 	Reply: User;
 }
 
