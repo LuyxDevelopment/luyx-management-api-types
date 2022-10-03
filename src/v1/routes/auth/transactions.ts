@@ -2,7 +2,7 @@ import { Transaction, TransactionType } from '../../models/Transaction.js';
 import { TransactionStatus } from '../../models/Wallet.js';
 import { BaseAuthRouteOptions } from './base.js';
 
-export interface PostTransactionsRouteOptions extends BaseAuthRouteOptions {
+export interface PostTransactionsRouteOptions extends BaseAuthRouteOptions<Transaction | TransactionStatus> {
 	Body: {
 		amount: number;
 		transactionType: TransactionType;
@@ -10,5 +10,4 @@ export interface PostTransactionsRouteOptions extends BaseAuthRouteOptions {
 		from: string | null;
 		to: string | null;
 	};
-	Reply: Transaction | TransactionStatus;
 }

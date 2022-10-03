@@ -1,19 +1,17 @@
 import { User } from '../../models/User.js';
 import { BaseAuthRouteOptions } from './base.js';
 
-export interface PostUsersRouteOptions extends BaseAuthRouteOptions {
+export interface PostUsersRouteOptions extends BaseAuthRouteOptions<User> {
 	Body: Omit<User, 'assignedProjects' | 'hiredAt' | 'wallet' | 'getFullName'>;
-	Reply: User;
 }
 
-export interface GetUsersRouteOptions extends BaseAuthRouteOptions {
+export interface GetUsersRouteOptions extends BaseAuthRouteOptions<User> {
 	Params: {
 		id: string;
 	};
-	Reply: User | null;
 }
 
-export interface DeleteUsersRouteOptions extends BaseAuthRouteOptions {
+export interface DeleteUsersRouteOptions extends BaseAuthRouteOptions<User> {
 	Params: {
 		id: string;
 	};
