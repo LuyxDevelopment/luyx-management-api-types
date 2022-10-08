@@ -14,11 +14,11 @@ export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project> {
 }
 
 export interface PatchProjectRouteOptions extends GetProjectRouteOptions {
-	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | 'assign' | 'unassign'>;
+	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | '_id'>;
 }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
-	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | 'assign' | 'unassign'>;
+	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | '_id'>;
 }
 
 export interface PostProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {

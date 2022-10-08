@@ -14,5 +14,5 @@ export interface DeleteUserRouteOptions extends BaseAuthRouteOptions<User> {
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<User> {
-	Body: Omit<User, 'assignedProjects' | 'hiredAt' | 'wallet' | 'getFullName'>;
+	Body: Omit<User, 'assignedProjects' | 'hiredAt' | 'wallet' | 'getFullName' | '_id'>;
 }

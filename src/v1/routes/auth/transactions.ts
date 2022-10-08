@@ -1,13 +1,7 @@
-import { Transaction, TransactionType } from '../../models/Transaction.js';
+import { Transaction } from '../../models/Transaction.js';
 import { TransactionStatus } from '../../models/Wallet.js';
 import { BaseAuthRouteOptions } from './base.js';
 
 export interface PostTransactionRouteOptions extends BaseAuthRouteOptions<Transaction | TransactionStatus> {
-	Body: {
-		amount: number;
-		transactionType: TransactionType;
-		description: string;
-		from: string | null;
-		to: string | null;
-	};
+	Body: Omit<Transaction, 'transactionStage' | '_id'>
 }
