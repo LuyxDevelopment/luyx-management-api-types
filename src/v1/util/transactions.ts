@@ -1,0 +1,13 @@
+export enum TransactionStage {
+	DEPOSIT_PENDING,
+	TRANSFER_PENDING,
+	WITHDRAWAL_PENDING,
+	COMPLETED,
+	FAILED,
+}
+
+export enum TransactionType {
+	DEPOSIT,
+	TRANSFER,
+	WITHDRAWAL,
+}
