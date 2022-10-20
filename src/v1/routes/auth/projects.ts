@@ -1,39 +1,33 @@
 import { Project } from '../../models/Project.js';
-import { BaseAuthRouteOptions } from './base.js';
+import { BaseAuthRouteOptions, Params } from '../base.js';
+
+export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project | Project[]> {
+	Params: Params;
+	Querystring: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
+}
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
-	Params: {
-		id: string;
-	};
+	Params: Params;
 }
 
-export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project> {
-	Params: {
-		id: string;
-	};
-}
-
-export interface PatchProjectRouteOptions extends GetProjectRouteOptions {
-	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | '_id'>;
+export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<Project> {
+	Params: Params;
+	Body: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
 }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
-	Body: Omit<Project, 'createdAt' | 'wallet' | 'assignedUsers' | '_id'>;
+	Body: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
 }
 
-export interface PostProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
-	Params: {
-		id: string;
-	};
+export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
+	Params: Params;
 	Body: {
 		userId: string;
 	};
 }
 
-export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
-	Params: {
-		id: string;
-	};
+export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
+	Params: Params;
 	Body: {
 		userId: string;
 	};

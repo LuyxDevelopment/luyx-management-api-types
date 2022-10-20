@@ -1,11 +1,8 @@
 import { Token } from '../../models/Token.js';
+import { BaseAuthRouteOptions } from '../index.js';
 
-export interface PostTokenRouteOptions {
-	Header: {
-		Authorization: string;
-	};
+export interface PostTokenRouteOptions extends BaseAuthRouteOptions<Token> {
 	Body: {
 		name: string;
 	};
-	Reply: Token | null;
 }

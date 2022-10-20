@@ -1,18 +1,20 @@
 import { User } from '../../models/User.js';
-import { BaseAuthRouteOptions } from './base.js';
+import { BaseAuthRouteOptions, Params } from '../base.js';
 
-export interface GetUserRouteOptions extends BaseAuthRouteOptions<User> {
-	Params: {
-		id: string;
-	};
+export interface DeleteUserRouteOptions extends BaseAuthRouteOptions {
+	Params: Params;
 }
 
-export interface DeleteUserRouteOptions extends BaseAuthRouteOptions<User> {
-	Params: {
-		id: string;
-	};
+export interface GetUserRouteOptions extends BaseAuthRouteOptions<User | User[]> {
+	Params: Params;
+	Querystring: Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName' | 'projects'>;
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<User> {
-	Body: Omit<User, 'assignedProjects' | 'hiredAt' | 'wallet' | 'getFullName' | '_id'>;
+	Body: Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName'>;
+}
+
+export interface PatchUserRouteOptions extends BaseAuthRouteOptions<User> {
+	Params: Params;
+	Body: Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName'>;
 }
