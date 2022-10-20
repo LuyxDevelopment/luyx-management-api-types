@@ -1,3 +1,7 @@
+export type Params = {
+	id: string;
+};
+
 export interface BaseAuthRouteOptions<D = null> {
 	Header: {
 		Authorization: string;
@@ -5,6 +9,6 @@ export interface BaseAuthRouteOptions<D = null> {
 	Reply: {
 		error: boolean;
 		message: string;
-		data: D | null
-	}
+		data: D | null;
+	};
 }
