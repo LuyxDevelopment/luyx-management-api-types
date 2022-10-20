@@ -7,5 +7,4 @@ export enum TransactionStatus {
 
 export interface Wallet extends Base {
 	balance: number;
-	transactions: string[];
 }
