@@ -19,14 +19,14 @@ export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
 	Body: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
 }
 
-export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<boolean> {
+export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
 	Params: Params;
 	Body: {
 		userId: string;
 	};
 }
 
-export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<boolean> {
+export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
 	Params: Params;
 	Body: {
 		userId: string;
