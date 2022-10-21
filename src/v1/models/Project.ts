@@ -10,4 +10,6 @@ export interface Project extends Base {
 	gitHubURL: string;
 	wallet: Wallet;
 	assignedUsers: User[];
+	assign(user: User): Promise<boolean>;
+	unassign(user: User): Promise<boolean>;
 }

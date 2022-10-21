@@ -19,7 +19,8 @@ export interface User extends Base {
 		dob: number;
 		timeZone: TimeZone;
 	};
-	projects: number;
 	jobTitles: string[];
+	projects: number;
 	wallet: Wallet;
+	getFullName(): string;
 }
