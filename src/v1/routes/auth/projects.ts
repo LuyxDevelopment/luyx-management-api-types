@@ -20,15 +20,9 @@ export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
 }
 
 export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
-	Params: Params;
-	Body: {
-		userId: string;
-	};
+	Params: Params & { user_id: string; };
 }
 
 export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
-	Params: Params;
-	Body: {
-		userId: string;
-	};
+	Params: Params & { user_id: string; };
 }
