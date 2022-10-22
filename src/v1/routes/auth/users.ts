@@ -16,5 +16,5 @@ export interface PostUserRouteOptions extends BaseAuthRouteOptions<User> {
 
 export interface PatchUserRouteOptions extends BaseAuthRouteOptions<User> {
 	Params: Params;
-	Body: Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName'>;
+	Body: Partial<Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName'>>;
 }
