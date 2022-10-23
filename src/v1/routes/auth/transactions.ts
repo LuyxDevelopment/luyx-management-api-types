@@ -8,6 +8,6 @@ export interface GetTransactionRouteOptions extends BaseAuthRouteOptions<Transac
 	Querystring: Partial<Pick<Transaction, 'amount' | 'description' | 'from' | 'timestamp' | 'to' | 'transactionStage' | 'transactionType'>>;
 }
 
-export interface PostTransactionRouteOptions extends BaseAuthRouteOptions<Transaction | TransactionStage> {
+export interface PostTransactionRouteOptions extends BaseAuthRouteOptions<Transaction> {
 	Body: PartialPick<Transaction, 'from' | 'to', 'amount' | 'description' | 'transactionStage' | 'transactionType'>;
 }
