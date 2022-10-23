@@ -1,12 +1,13 @@
 import { Transaction } from '../../models/Transaction.js';
 import { TransactionStage } from '../../util/transactions.js';
+import { PartialPick } from '../../util/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetTransactionRouteOptions extends BaseAuthRouteOptions<Transaction | Transaction[]> {
 	Params: Params;
-	Querystring: Pick<Transaction, 'amount' | 'description' | 'from' | 'timestamp' | 'to' | 'transactionStage' | 'transactionType'>;
+	Querystring: Partial<Pick<Transaction, 'amount' | 'description' | 'from' | 'timestamp' | 'to' | 'transactionStage' | 'transactionType'>>;
 }
 
 export interface PostTransactionRouteOptions extends BaseAuthRouteOptions<Transaction | TransactionStage> {
-	Body: Pick<Transaction, 'amount' | 'description' | 'from' | 'to' | 'transactionStage' | 'transactionType'>;
+	Body: PartialPick<Transaction, 'from' | 'to', 'amount' | 'description' | 'transactionStage' | 'transactionType'>;
 }

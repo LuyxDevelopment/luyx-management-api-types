@@ -1,9 +1,10 @@
 import { Project } from '../../models/Project.js';
+import { PartialPick } from '../../util/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project | Project[]> {
 	Params: Params;
-	Querystring: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
+	Querystring: Partial<Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>>;
 }
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
@@ -16,7 +17,7 @@ export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<Project> 
 }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
-	Body: Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>;
+	Body: PartialPick<Project, 'createdAt', 'deadline' | 'description' | 'gitHubURL' | 'name'>;
 }
 
 export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {

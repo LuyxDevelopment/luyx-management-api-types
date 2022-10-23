@@ -7,7 +7,7 @@ export interface DeleteUserRouteOptions extends BaseAuthRouteOptions {
 
 export interface GetUserRouteOptions extends BaseAuthRouteOptions<User | User[]> {
 	Params: Params;
-	Querystring: Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName' | 'projects'>;
+	Querystring: Partial<Pick<User, 'alias' | 'contact' | 'firstName' | 'hiredAt' | 'info' | 'jobTitles' | 'lastName' | 'projects'>>;
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<User> {
