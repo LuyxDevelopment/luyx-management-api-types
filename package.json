@@ -12,7 +12,7 @@
 	},
 	"homepage": "https://github.com/LuyxDevelopment/luyx-management-api-types#readme",
 	"devDependencies": {
-		"@types/node": "^18.0.3",
+		"@types/node": "^18.11.4",
 		"@typescript-eslint/eslint-plugin": "^5.30.5",
 		"@typescript-eslint/parser": "^5.30.5",
 		"eslint": "^8.26.0",
