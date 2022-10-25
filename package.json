@@ -5,7 +5,12 @@
 	"exports": {
 		"./v1": "./build/v1/index.js"
 	},
-	"author": "Luyx",
+	"type": "module",
+	"author": {
+		"name": "Luyx Development",
+		"email": "contact@luyx.dev",
+		"url": "https://luyx.dev"
+	},
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/LuyxDevelopment/luyx-management-api-types/issues"
