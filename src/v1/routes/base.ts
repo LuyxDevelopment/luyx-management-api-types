@@ -9,6 +9,6 @@ export interface BaseAuthRouteOptions<D = null> {
 	Reply: {
 		error: boolean;
 		message: string;
-		data?: D | null;
+		data?: D;
 	};
 }
