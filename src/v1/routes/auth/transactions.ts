@@ -1,5 +1,4 @@
 import { Transaction } from '../../models/Transaction.js';
-import { TransactionStage } from '../../util/transactions.js';
 import { PartialPick } from '../../util/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
