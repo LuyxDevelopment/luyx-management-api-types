@@ -9,7 +9,7 @@ export interface User extends Base {
 	lastName: string;
 	alias: string;
 	contact: {
-		discordId: string | null;
+		discordId: string;
 		email: string;
 		gitHub: string;
 		phone: string | null;
