@@ -1,10 +1,10 @@
 import { Project } from '../../models/Project.js';
-import { PartialPick } from '../../utils/util.js';
+import { DeepPartial, PartialPick } from '../../utils/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project | Project[]> {
 	Params: Params;
-	Querystring: Partial<Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>>;
+	Querystring: DeepPartial<Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name' | 'assignedUsers'>>;
 }
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {

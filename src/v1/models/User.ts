@@ -7,7 +7,7 @@ import { Wallet } from './Wallet.js';
 export interface User extends Base {
 	firstName: string;
 	lastName: string;
-	alias: string | null;
+	alias: string;
 	contact: {
 		discordId: string | null;
 		email: string;
@@ -23,7 +23,7 @@ export interface User extends Base {
 	authorityLevel: {
 		type: number,
 		default: AuthorityLevel.MEMBER,
-	}
+	};
 	positions: UserPosition[];
 	projects: number;
 	wallet: Wallet;
