@@ -20,10 +20,7 @@ export interface User extends Base {
 		dob: number;
 		timeZone: TimeZone;
 	};
-	authorityLevel: {
-		type: number,
-		default: AuthorityLevel.MEMBER,
-	};
+	authorityLevel: AuthorityLevel,
 	positions: UserPosition[];
 	projects: number;
 	wallet: Wallet;
