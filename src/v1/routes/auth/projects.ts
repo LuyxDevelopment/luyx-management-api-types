@@ -1,5 +1,5 @@
 import { Project } from '../../models/Project.js';
-import { PartialPick } from '../../util/util.js';
+import { PartialPick } from '../../utils/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project | Project[]> {

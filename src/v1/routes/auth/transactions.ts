@@ -1,6 +1,6 @@
 import { TransactionStage } from '../../index.js';
 import { Transaction } from '../../models/Transaction.js';
-import { PartialPick } from '../../util/util.js';
+import { PartialPick } from '../../utils/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetTransactionRouteOptions extends BaseAuthRouteOptions<Transaction | Transaction[]> {

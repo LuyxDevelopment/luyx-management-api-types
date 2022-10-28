@@ -1,5 +1,6 @@
-import { CountryCode } from '../util/country_codes.js';
-import { TimeZone } from '../util/timezones.js';
+import { AuthorityLevel, UserPosition } from '../index.js';
+import { CountryCode } from '../utils/country_codes.js';
+import { TimeZone } from '../utils/timezones.js';
 import { Base } from './base.js';
 import { Wallet } from './Wallet.js';
 
@@ -19,7 +20,11 @@ export interface User extends Base {
 		dob: number;
 		timeZone: TimeZone;
 	};
-	jobTitles: string[];
+	authorityLevel: {
+		type: number,
+		default: AuthorityLevel.MEMBER,
+	}
+	positions: UserPosition[];
 	projects: number;
 	wallet: Wallet;
 	getFullName(): string;

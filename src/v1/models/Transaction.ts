@@ -1,4 +1,4 @@
-import { TransactionStage, TransactionType } from '../util/transactions.js';
+import { TransactionStage, TransactionType } from '../utils/transactions.js';
 import { Base } from './base.js';
 import { Wallet } from './Wallet.js';
 
