@@ -1,3 +1,5 @@
+import { StatusCodePhrases } from '../index.js';
+
 export type Params = {
 	id: string;
 };
@@ -8,7 +10,7 @@ export interface BaseAuthRouteOptions<D = null> {
 	};
 	Reply: {
 		error: boolean;
-		message: string;
+		message: StatusCodePhrases;
 		data: D | null;
 	};
 }
