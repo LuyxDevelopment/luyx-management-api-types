@@ -4,7 +4,7 @@ import { Wallet } from './Wallet.js';
 
 export interface Project extends Base {
 	name: string;
-	description: string;
+	description: string | null;
 	createdAt: number;
 	deadline: number;
 	gitHubURL: string;
