@@ -5,9 +5,10 @@ import { Base } from './base.js';
 import { Wallet } from './Wallet.js';
 
 export interface User extends Base {
+	alias: string;
 	firstName: string;
 	lastName: string;
-	alias: string;
+	private: boolean;
 	contact: {
 		discordId: string;
 		email: string;
