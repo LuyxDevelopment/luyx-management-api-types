@@ -8,7 +8,7 @@ export interface User extends Base {
 	alias: string;
 	firstName: string;
 	lastName: string;
-	private: boolean;
+	visibility: 'public' | 'private';
 	contact: {
 		discordId: string;
 		email: string;
