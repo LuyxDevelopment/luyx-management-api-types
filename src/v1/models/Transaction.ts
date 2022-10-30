@@ -1,12 +1,11 @@
 import { TransactionStage, TransactionType } from '../utils/transactions.js';
 import { Base } from './base.js';
-import { Wallet } from './Wallet.js';
 
 export interface Transaction extends Base {
 	amount: number;
 	description: string;
-	from: null | Wallet;
-	to: null | Wallet;
+	from: null | string;
+	to: null | string;
 	timestamp: number;
 	transactionStage: TransactionStage;
 	transactionType: TransactionType;

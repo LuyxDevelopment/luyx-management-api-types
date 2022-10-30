@@ -2,7 +2,6 @@ import { AuthorityLevel, UserPosition } from '../index.js';
 import { CountryCode } from '../utils/country_codes.js';
 import { TimeZone } from '../utils/timezones.js';
 import { Base } from './base.js';
-import { Wallet } from './Wallet.js';
 
 export interface User extends Base {
 	alias: string;
@@ -24,6 +23,6 @@ export interface User extends Base {
 	authorityLevel: AuthorityLevel,
 	positions: UserPosition[];
 	projects: number;
-	wallet: Wallet;
+	wallet: string;
 	getFullName(): string;
 }
