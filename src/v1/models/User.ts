@@ -24,5 +24,4 @@ export interface User extends Base {
 	positions: UserPosition[];
 	projects: number;
 	wallet: string;
-	getFullName(): string;
 }
