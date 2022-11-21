@@ -13,7 +13,6 @@ export interface User extends Base {
 		discordId: string;
 		email: string;
 		gitHub: string;
-		phone: string | null;
 	};
 	hiredAt: number;
 	info: {
