@@ -5,6 +5,7 @@ import { Base } from './base.js';
 
 export interface User extends Base {
 	alias: string;
+	avatar: string;
 	firstName: string;
 	lastName: string;
 	isPrivate: boolean;
