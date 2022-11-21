@@ -8,14 +8,14 @@ export interface DeleteUserRouteOptions extends BaseAuthRouteOptions {
 
 export interface GetUserRouteOptions extends BaseAuthRouteOptions<User | User[]> {
 	Params: Params;
-	Querystring: DeepPartial<Pick<User, 'alias' | 'firstName' | 'lastName' | 'contact' | 'hiredAt' | 'info' | 'authorityLevel' | 'positions' | 'isPrivate' | 'projects'>>;
+	Querystring: DeepPartial<Pick<User, 'alias' | 'avatar' | 'firstName' | 'lastName' | 'contact' | 'hiredAt' | 'info' | 'authorityLevel' | 'positions' | 'isPrivate' | 'projects'>>;
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<User> {
-	Body: PartialPick<User, 'authorityLevel' | 'hiredAt' | 'isPrivate', 'alias' | 'contact' | 'firstName' | 'info' | 'positions' | 'lastName'>;
+	Body: PartialPick<User, 'authorityLevel' | 'hiredAt' | 'isPrivate' | 'avatar', 'alias' | 'contact' | 'firstName' | 'info' | 'positions' | 'lastName'>;
 }
 
 export interface PatchUserRouteOptions extends BaseAuthRouteOptions<User> {
 	Params: Params;
-	Body: DeepPartial<Pick<User, 'alias' | 'firstName' | 'lastName' | 'contact' | 'hiredAt' | 'info' | 'authorityLevel' | 'positions' | 'isPrivate'>>;
+	Body: DeepPartial<Pick<User, 'alias' | 'avatar' | 'firstName' | 'lastName' | 'contact' | 'hiredAt' | 'info' | 'authorityLevel' | 'positions' | 'isPrivate'>>;
 }
