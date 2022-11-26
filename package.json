@@ -18,8 +18,8 @@
 	"homepage": "https://github.com/LuyxDevelopment/luyx-management-api-types#readme",
 	"devDependencies": {
 		"@types/node": "^18.11.9",
-		"@typescript-eslint/eslint-plugin": "^5.30.5",
-		"@typescript-eslint/parser": "^5.30.5",
+		"@typescript-eslint/eslint-plugin": "^5.44.0",
+		"@typescript-eslint/parser": "^5.44.0",
 		"eslint": "^8.28.0",
 		"typescript": "^4.9.3"
 	},
@@ -28,6 +28,6 @@
 		"lint": "eslint --cache --fix",
 		"start": "npm run lint && npm run build && node build/index.js",
 		"check": "npm run lint && tsc --noEmit",
-		"preinstall": "npm run build"
+		"prepare": "npm run build"
 	}
 }
