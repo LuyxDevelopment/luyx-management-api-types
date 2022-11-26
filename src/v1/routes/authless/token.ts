@@ -1,7 +1,7 @@
-import { Token } from '../../models/Token.js';
+import { APIToken } from '../../models/APIToken.js';
 import { BaseAuthRouteOptions } from '../index.js';
 
-export interface PostTokenRouteOptions extends BaseAuthRouteOptions<Token> {
+export interface PostTokenRouteOptions extends BaseAuthRouteOptions<APIToken> {
 	Body: {
 		name: string;
 	};

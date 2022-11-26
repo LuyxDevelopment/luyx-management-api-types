@@ -3,7 +3,7 @@ import { CountryCode } from '../utils/country_codes.js';
 import { TimeZone } from '../utils/timezones.js';
 import { Base } from './base.js';
 
-export interface User extends Base {
+export interface APIUser extends Base {
 	alias: string;
 	avatar: string;
 	firstName: string;

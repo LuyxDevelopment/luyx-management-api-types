@@ -1,6 +1,6 @@
 import { Base } from './base.js';
 
-export interface Project extends Base {
+export interface APIProject extends Base {
 	name: string;
 	description: string | null;
 	createdAt: number;

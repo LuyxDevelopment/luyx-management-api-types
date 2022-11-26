@@ -1,29 +1,29 @@
-import { Project } from '../../models/Project.js';
+import { APIProject } from '../../models/APIProject.js';
 import { DeepPartial, PartialPick } from '../../utils/util.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
-export interface GetProjectRouteOptions extends BaseAuthRouteOptions<Project | Project[]> {
+export interface GetProjectRouteOptions extends BaseAuthRouteOptions<APIProject | APIProject[]> {
 	Params: Params;
-	Querystring: DeepPartial<Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name' | 'assignedUsers'>>;
+	Querystring: DeepPartial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name' | 'assignedUsers'>>;
 }
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
 	Params: Params;
 }
 
-export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<Project> {
+export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Params: Params;
-	Body: Partial<Pick<Project, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>>;
+	Body: Partial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>>;
 }
 
-export interface PostProjectRouteOptions extends BaseAuthRouteOptions<Project> {
-	Body: PartialPick<Project, 'description' | 'gitHubURL', 'deadline' | 'name'>;
+export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
+	Body: PartialPick<APIProject, 'description' | 'gitHubURL', 'deadline' | 'name'>;
 }
 
-export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
+export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Params: Params & { user_id: string; };
 }
 
-export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<Project> {
+export interface PutProjectAssignedRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Params: Params & { user_id: string; };
 }

@@ -1,8 +1,8 @@
 import { StatusCodePhrases } from '../index.js';
 
-export type Params = {
+export interface Params {
 	id: string;
-};
+}
 
 export interface BaseAuthRouteOptions<D = null> {
 	Header: {
