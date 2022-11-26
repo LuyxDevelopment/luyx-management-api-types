@@ -1,4 +1,4 @@
-import { AuthorityLevel, UserPosition } from '../index.js';
+import { AuthorityLevel, UserPositionTitle as UserPosition, UserSubPosition } from '../index.js';
 import { CountryCode } from '../utils/country_codes.js';
 import { TimeZone } from '../utils/timezones.js';
 import { Base } from './base.js';
@@ -21,7 +21,8 @@ export interface User extends Base {
 		timeZone: TimeZone;
 	};
 	authorityLevel: AuthorityLevel,
-	positions: UserPosition[];
+	subPositions: UserSubPosition[];
+	position: UserPosition;
 	projects: number;
 	wallet: string;
 }
