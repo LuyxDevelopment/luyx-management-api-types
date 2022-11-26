@@ -27,6 +27,6 @@
 		"build": "tsc",
 		"lint": "eslint --cache --fix",
 		"check": "npm run lint && tsc --noEmit",
-		"prepare": "npm run build"
+		"preinstall": "npm run build"
 	}
 }
