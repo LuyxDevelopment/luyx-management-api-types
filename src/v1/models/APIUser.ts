@@ -1,4 +1,4 @@
-import { AuthorityLevel, UserPositionTitle as UserPosition, UserSubPosition } from '../index.js';
+import { AuthorityLevel, UserPositionTitle, UserSubPosition } from '../index.js';
 import { CountryCode } from '../utils/country_codes.js';
 import { TimeZone } from '../utils/timezones.js';
 import { Base } from './base.js';
@@ -22,7 +22,7 @@ export interface APIUser extends Base {
 	};
 	authorityLevel: AuthorityLevel,
 	subPositions: UserSubPosition[];
-	position: UserPosition;
+	position: UserPositionTitle;
 	projects: number;
 	wallet: string;
 }
