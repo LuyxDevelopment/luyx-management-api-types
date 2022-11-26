@@ -1,5 +1,5 @@
 import { Base } from './base.js';
 
-export interface Wallet extends Base {
+export interface APIWallet extends Base {
 	balance: number;
 }
