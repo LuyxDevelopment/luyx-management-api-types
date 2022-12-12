@@ -3,7 +3,10 @@
 	"version": "1.0.0",
 	"description": "API types for luyx-management",
 	"exports": {
-		"./v1": "./build/v1/index.js"
+		"./v1": {
+			"require": "./build/v1/index.js",
+			"types": "./build/v1/index.d.ts"
+		}
 	},
 	"type": "module",
 	"author": {
