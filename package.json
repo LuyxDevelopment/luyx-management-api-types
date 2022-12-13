@@ -31,6 +31,7 @@
 		"lint": "eslint --cache --fix",
 		"check": "npm run lint && tsc --noEmit",
 		"prepublish": "npm run build",
-		"prepare": "npm run build"
+		"prepare": "npm run build",
+		"preinstall": "npm run build"
 	}
 }
