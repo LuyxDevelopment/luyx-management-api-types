@@ -4,7 +4,7 @@ import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<APIProject | APIProject[]> {
 	Params: Params;
-	Querystring: Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'isPrivate' | 'name' | 'assignedUsers'>;
+	Querystring: Partial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'isPrivate' | 'name' | 'assignedUsers'>>;
 }
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
