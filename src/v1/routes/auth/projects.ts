@@ -17,7 +17,7 @@ export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
 // }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
-	Body: PartialPick<APIProject, 'gitHubURL' | 'isPrivate', 'deadline' | 'description' | 'name'>;
+	Body: PartialPick<APIProject, 'gitHubURL' | 'isPrivate' | 'description', 'deadline' | 'name'>;
 }
 
 export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<APIProject> {
