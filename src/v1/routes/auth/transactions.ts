@@ -1,6 +1,6 @@
 import { TransactionStage } from '../../index.js';
 import { APITransaction } from '../../models/APITransaction.js';
-import { DeepPartial, PartialPick } from '../../utils/util.js';
+import { DeepPartial, PartialPick } from '../../utils/util_types.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetTransactionRouteOptions extends BaseAuthRouteOptions<APITransaction | APITransaction[]> {

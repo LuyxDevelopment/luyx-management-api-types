@@ -1,6 +1,4 @@
-import { AuthorityLevel, UserPositionTitle, UserSubPosition } from '../index.js';
-import { CountryCode } from '../utils/country_codes.js';
-import { TimeZone } from '../utils/timezones.js';
+import { AuthorityLevel, CountryCode, TimeZone, UserPositionTitle, UserSubPosition } from '../index.js';
 import { Base } from './base.js';
 
 export interface APIUser extends Base {
