@@ -11,10 +11,10 @@ export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
 	Params: Params;
 }
 
-// export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
-// 	Params: Params;
-// 	Body: Partial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'gitHubURL' | 'name'>>;
-// }
+export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
+	Params: Params;
+	Body: Partial<Pick<APIProject, 'deadline' | 'description' | 'isPrivate' | 'stage'>>;
+}
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Body: PartialPick<APIProject, 'gitHubURL' | 'isPrivate' | 'description' | 'stage', 'deadline' | 'name'>;
