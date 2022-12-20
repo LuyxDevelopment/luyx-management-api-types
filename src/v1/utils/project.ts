@@ -1,3 +1,12 @@
+
+export const ProjectStages = [
+	'complete',
+	'payment',
+	'testing',
+	'development',
+	'pending',
+] as const;
+
 /**
  * In order of completely finished to waiting to begin
  * 
@@ -11,4 +20,4 @@
  * 
  * pending - Project is initialized but waiting to start
  */
-export type ProjectStage = 'complete' | 'payment' | 'testing' | 'development' | 'pending';
+export type ProjectStage = typeof ProjectStages[number];
