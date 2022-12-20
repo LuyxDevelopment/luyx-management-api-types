@@ -8,7 +8,7 @@ export interface DeleteUserRouteOptions extends BaseAuthRouteOptions {
 
 export interface GetUserRouteOptions extends BaseAuthRouteOptions<APIUser | APIUser[]> {
 	Params: Params;
-	Querystring: DeepPartial<Pick<APIUser, 'alias' | 'avatar' | 'firstName' | 'lastName' | 'contact' | 'hiredAt' | 'info' | 'authorityLevel' | 'position' | 'isPrivate' | 'projects' | 'subPositions'>>;
+	Querystring: DeepPartial<Pick<APIUser, 'alias' | 'avatar' | 'firstName' | 'lastName' | 'hiredAt' | 'authorityLevel' | 'position' | 'isPrivate' | 'projects' | 'subPositions'>>;
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<APIUser> {
