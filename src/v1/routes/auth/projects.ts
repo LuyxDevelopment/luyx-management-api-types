@@ -18,6 +18,7 @@ export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProjec
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Body: PartialPick<APIProject, 'isPrivate' | 'description' | 'stage', 'deadline' | 'name'>;
+	Querystring: { import: boolean; };
 }
 
 export interface DeleteProjectAssignedRouteOptions extends BaseAuthRouteOptions<APIProject> {
