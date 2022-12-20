@@ -6,7 +6,6 @@ export interface APIProject extends Base {
 	description: string;
 	createdAt: number;
 	deadline: number;
-	gitHubURL: string;
 	isPrivate: boolean;
 	stage: ProjectStage;
 	wallet: string;
