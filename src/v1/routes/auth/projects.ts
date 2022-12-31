@@ -4,7 +4,7 @@ import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<APIProject | APIProject[]> {
 	Params: Params;
-	Querystring: Partial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'isPrivate' | 'name' | 'assignedUsers' | 'stage'>>;
+	Querystring: Partial<Pick<APIProject, 'createdAt' | 'deadline' | 'description' | 'isPrivate' | 'name' | 'stage'>>;
 }
 
 export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
@@ -13,11 +13,11 @@ export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
 
 export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Params: Params;
-	Body: Partial<Pick<APIProject, 'deadline' | 'description' | 'isPrivate' | 'stage'>>;
+	Body: Partial<Pick<APIProject, 'deadline' | 'description' | 'imageURL' | 'isPrivate' | 'stage'>>;
 }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
-	Body: PartialPick<APIProject, 'isPrivate' | 'description' | 'stage', 'deadline' | 'name'>;
+	Body: PartialPick<APIProject, 'isPrivate' | 'description' | 'stage', 'deadline' | 'imageURL' | 'name'>;
 	Querystring: { import: boolean; };
 }
 
