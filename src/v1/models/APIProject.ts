@@ -4,6 +4,10 @@ import { Base } from './base.js';
 export interface APIProject extends Base {
 	name: string;
 	description: string;
+	contact: {
+		email: string;
+		phone: string;
+	};
 	createdAt: number;
 	deadline: number;
 	imageURL: string;

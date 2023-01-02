@@ -1,5 +1,5 @@
 import { APIProject } from '../../models/APIProject.js';
-import { PartialPick } from '../../utils/util_types.js';
+import { DeepPartial, PartialPick } from '../../utils/util_types.js';
 import { BaseAuthRouteOptions, Params } from '../base.js';
 
 export interface GetProjectRouteOptions extends BaseAuthRouteOptions<APIProject | APIProject[]> {
@@ -13,11 +13,11 @@ export interface DeleteProjectRouteOptions extends BaseAuthRouteOptions {
 
 export interface PatchProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
 	Params: Params;
-	Body: Partial<Pick<APIProject, 'deadline' | 'description' | 'imageURL' | 'isPrivate' | 'stage'>>;
+	Body: DeepPartial<Pick<APIProject, 'deadline' | 'description' | 'imageURL' | 'isPrivate' | 'stage' | 'contact'>>;
 }
 
 export interface PostProjectRouteOptions extends BaseAuthRouteOptions<APIProject> {
-	Body: PartialPick<APIProject, 'isPrivate' | 'description' | 'stage', 'deadline' | 'imageURL' | 'name'>;
+	Body: PartialPick<APIProject, 'isPrivate' | 'description' | 'stage', 'deadline' | 'imageURL' | 'name' | 'contact'>;
 	Querystring: { import: boolean; };
 }
 
