@@ -3,7 +3,7 @@ import { Base } from './base.js';
 
 export interface APIUser extends Base {
 	alias: string;
-	avatarURL: string | null;
+	avatarURL: string;
 	firstName: string;
 	lastName: string;
 	isPrivate: boolean;
