@@ -12,7 +12,7 @@ export interface GetUserRouteOptions extends BaseAuthRouteOptions<APIUser | APIU
 }
 
 export interface PostUserRouteOptions extends BaseAuthRouteOptions<APIUser> {
-	Body: PartialPick<APIUser, 'authorityLevel' | 'hiredAt' | 'isPrivate' | 'avatarURL', 'alias' | 'contact' | 'firstName' | 'info' | 'position' | 'subPositions' | 'lastName'>;
+	Body: PartialPick<APIUser, 'authorityLevel' | 'contact' | 'hiredAt' | 'isPrivate', 'alias' | 'avatarURL' | 'firstName' | 'info' | 'position' | 'subPositions' | 'lastName'>;
 }
 
 export interface PatchUserRouteOptions extends BaseAuthRouteOptions<APIUser> {
