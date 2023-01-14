@@ -1,4 +1,4 @@
-import {  RoutePermission } from '../utils/token.js';
+import { RoutePermission } from '../utils/token.js';
 import { Base } from './base.js';
 
 export interface APIToken extends Base {
