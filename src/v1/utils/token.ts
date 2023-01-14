@@ -1,4 +1,4 @@
-export const APIRouts = [
+export const APIRoutes = [
 	'/v1/',
 	'/v1/projects/',
 	'/v1/projects/:id',
@@ -11,7 +11,7 @@ export const APIRouts = [
 	'/v1/users/:id',
 ] as const;
 
-export type APIRoute = typeof APIRouts[number];
+export type APIRoute = typeof APIRoutes[number];
 
 export const APIMethods = [
 	'GET',
