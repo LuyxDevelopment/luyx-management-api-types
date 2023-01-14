@@ -12,7 +12,7 @@ export type APIRoute =
 
 export type APIMethod = 'GET' | 'HEAD' | 'POST' | 'PUT' | 'DELETE' | 'CONNECT' | 'OPTIONS' | 'TRACE' | 'PATCH';
 
-export interface TokenPermission {
+export interface RoutePermission {
 	route: APIRoute;
 	methods: APIMethod;
 }
