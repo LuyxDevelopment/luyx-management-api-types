@@ -29,5 +29,5 @@ export type APIMethod = typeof APIMethods[number];
 
 export interface RoutePermission {
 	route: APIRoute;
-	methods: APIMethod;
+	methods: APIMethod[];
 }
